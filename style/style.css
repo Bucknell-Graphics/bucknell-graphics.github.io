@@ -1,0 +1,234 @@
+/* Style of the html, body tags and the container class */
+html, body, .container {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-font);
+}
+
+/* Define light and dark classes */
+.theme-light {
+  --bu-logo-path: ./assets/bulogo_blue.png;
+  --color-bg: #ffffff;
+  --color-font: #000000;
+  --color-font-hover: #888888;
+  --color-font-active: #ffa300;
+  --color-font-visited: #444444;
+  --color-font-holiday: #000000;
+  --color-font-exam: #000000;
+  --color-table-head-bg: #59cbe8;
+  --color-table-bg: #e87722;
+  --color-table-bg-2: #ffa300;
+  --color-table-hl: #ffffe0;
+  --color-table-exam: #59cbe8;
+}
+.theme-dark {
+  --bu-logo-path: ./assets/bulogo_orange.png;
+  --color-bg: #003865;
+  --color-font: #ffffff;
+  --color-font-hover: #888888;
+  --color-font-active: #ffa300;
+  --color-font-visited: #bbbbbb;
+  --color-font-holiday: #000000;
+  --color-font-exam: #ffffff;
+  --color-table-head-bg: #e87722;
+  --color-table-bg: #003865;
+  --color-table-bg-2: #0082ba;
+  --color-table-hl: #ffffe0;
+  --color-table-exam: #e87722;
+}
+
+/*********************************************
+ * Header and Footer
+ *********************************************/
+header {
+  position: sticky;
+  top: 0;
+  padding: 10px 10px;
+  background-color: var(--color-bg);
+}
+content {
+  height: 100vh;
+  overflow-y: scroll;
+}
+footer {
+  position: sticky;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: var(--color-table-head-bg);
+}
+p.copyright {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+  z-index: 10;
+  font-family: Noto Sans, Utopia, Libre Baskerville, Oswald, Freight Sans, Open Sans, sans-serif;
+  font-weight: bold;
+  color: var(--color-font);
+}
+
+/* Change a tag colors */
+a {
+  color: var(--color-font);
+}
+a:hover {
+  color: var(--color-font-hover);
+}
+a:active {
+  color: var(--color-font-active);
+}
+a:visited {
+  color: var(--color-font-visited);
+}
+
+/* Toogle style */
+.themelabel {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 60px;
+  height: 30px;
+  background: var(--color-table-head-bg);
+  border-radius: 100px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2), inset 0px -5px 15px rgba(1, 1, 1 0.2);
+  cursor: pointer;
+}
+/* Create toogle animation */
+.themelabel:after {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 3px;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(180deg, var(--color-table-bg-2), var(--color-table-bg));
+  border-radius: 100px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+#theme:checked + .themelabel:after {
+  left: 57px;
+  transform: translateX(-100%);
+}
+.themelabel, .themelabel:after {
+  transition: 0.3s;
+}
+
+/* Center img tag */
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 75vh;
+  margin: auto;
+}
+
+/* Center h1 tag and fonts*/
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  font-family: Helvetica, sans-serif, Arial;
+}
+
+/* Center h3 tag and fonts*/
+.desc {
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: normal;
+  margin-top: 1.em;
+  margin-bottom: 1.em;
+  font-family: Helvetica, sans-serif, Arial;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 750%;
+  min-width: 640px;
+  width: 80%; 
+}
+
+/* the tasks class for the table */
+.tasks {
+  border-collapse: collapse;
+  margin: 25px 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  max-width: 750%;
+  min-width: 640px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  overflow: visible;
+}
+
+/* table's cells */
+.tasks th, .tasks td {
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+/* table's corners */
+.tasks thead tr:first-child th:first-child {
+  border-top-left-radius: 20px;
+  border-right: 1px solid;
+}
+.tasks thead tr:first-child th:last-child {
+  border-top-right-radius: 20px;
+  border-left: 1px solid;
+}
+.tasks tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+.tasks tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+/* table's head */
+.tasks thead tr {
+  font-weight: bold;
+  background-color: var(--color-table-head-bg);
+  text-align: center;
+}
+
+/* table's row */
+.tasks tbody tr {
+  border-top: 1px solid #dddddd;
+  background-color: var(--color-table-bg);
+}
+.tasks tbody tr td:not(:first-child):not(:last-child):not(.holiday):not(.exam) {
+  vertical-align:top
+}
+.tasks tbody tr td:first-child {
+  border-right: 1px solid;
+  vertical-align: center;
+}
+.tasks tbody tr td:last-child {
+  border-left: 1px solid;
+  vertical-align: center;
+}
+.tasks tbody tr:nth-of-type(even) {
+  background-color: var(--color-table-bg-2);
+}
+.tasks tbody tr.holiday {
+  color: var(--color-font-holiday);
+  background-color: var(--color-table-hl);
+}
+.tasks tbody tr td.holiday {
+  color: var(--color-font-holiday);
+  background-color: var(--color-table-hl);
+}
+.tasks tbody tr td.exam {
+  color: var(--color-font-exam);
+  background-color: var(--color-table-exam);
+}
+.tasks tbody tr td ul {
+  text-align: left;
+}
+
+
