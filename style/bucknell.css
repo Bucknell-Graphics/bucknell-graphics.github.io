@@ -1,0 +1,45 @@
+html, body, .container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.theme-light {
+  --f-color: #000;
+  --a-color: #555;
+  --a-hover-color: #888;
+}
+.theme-dark {
+  --f-color: #fff;
+  --a-color: #aaa;
+  --a-hover-color: #777;
+}
+/*********************************************
+ * COPYRIGHT
+ *********************************************/
+.copyright {
+  position: absolute;
+  bottom: 0px;
+  right: 16px;
+  z-index: 10;
+  font-family: Noto Sans, Utopia, Libre Baskerville, Oswald, Freight Sans, Open Sans, sans-serif;
+  font-weight: normal;
+  color: var(--f-color);
+}
+
+.copyright a {
+  color: var(--a-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.copyright a:hover {
+  color: var(--a-hover-color);
+  text-shadow: none;
+  border: none;
+}
+
+.copyright .roll span:after {
+  color: var(--f-color);
+}
