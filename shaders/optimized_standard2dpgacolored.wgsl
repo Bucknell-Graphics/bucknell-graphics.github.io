@@ -44,22 +44,22 @@ struct tint_symbol_8_block {
   inner : tint_symbol_5,
 }
 
-struct tint_symbol_18 {
+struct tint_symbol_20 {
   /* @offset(0) */
-  tint_symbol_19 : vec4f,
+  tint_symbol_21 : vec4f,
   /* @offset(16) */
-  tint_symbol_20 : vec4f,
+  tint_symbol_22 : vec4f,
 }
 
-var<private> tint_symbol_22_1 : vec2f;
+var<private> tint_symbol_24_1 : vec2f;
 
-var<private> tint_symbol_20_1 : vec4f;
+var<private> tint_symbol_22_1 : vec4f;
 
-var<private> tint_symbol_19_1 = vec4f();
+var<private> tint_symbol_21_1 = vec4f();
 
-var<private> tint_symbol_20_2 = vec4f();
+var<private> tint_symbol_22_2 = vec4f();
 
-var<private> tint_symbol_20_3 : vec4f;
+var<private> tint_symbol_22_3 : vec4f;
 
 var<private> value = vec4f();
 
@@ -80,65 +80,75 @@ fn tint_symbol_13(tint_symbol_14 : tint_symbol, tint_symbol_15 : tint_symbol) ->
   return x_90;
 }
 
-fn tint_symbol_16(tint_symbol_14_1 : vec2f, tint_symbol_15_1 : tint_symbol) -> vec2f {
-  let x_96 = tint_symbol_13(tint_symbol(0.0f, 1.0f, tint_symbol_14_1.x, tint_symbol_14_1.y), tint_symbol_15_1);
-  return vec2f((x_96.tint_symbol_3 / x_96.tint_symbol_2), (x_96.tint_symbol_4 / x_96.tint_symbol_2));
+fn tint_symbol_16(tint_symbol_14_1 : vec2f) -> tint_symbol {
+  return tint_symbol(0.0f, 1.0f, tint_symbol_14_1.y, -(tint_symbol_14_1.x));
 }
 
-fn tint_symbol_21_inner(tint_symbol_22 : vec2f, tint_symbol_20 : vec4f) -> tint_symbol_18 {
-  var tint_symbol_23 = tint_symbol_18(vec4f(), vec4f());
-  let x_125 = tint_symbol_8.inner.tint_symbol_6;
-  let x_120 = tint_symbol_16(tint_symbol_22, x_125);
-  let x_130 = (x_120 * tint_symbol_8.inner.tint_symbol_7);
-  tint_symbol_23.tint_symbol_19 = vec4f(x_130.x, x_130.y, 0.0f, 1.0f);
-  tint_symbol_23.tint_symbol_20 = tint_symbol_20;
-  let x_137 = tint_symbol_23;
-  return x_137;
+fn tint_symbol_17(tint_symbol_14_2 : tint_symbol) -> vec2f {
+  return vec2f((-(tint_symbol_14_2.tint_symbol_4) / tint_symbol_14_2.tint_symbol_2), (tint_symbol_14_2.tint_symbol_3 / tint_symbol_14_2.tint_symbol_2));
 }
 
-fn tint_symbol_21_1() {
-  let x_143 = tint_symbol_22_1;
-  let x_144 = tint_symbol_20_1;
-  let x_142 = tint_symbol_21_inner(x_143, x_144);
-  tint_symbol_19_1 = x_142.tint_symbol_19;
-  tint_symbol_20_2 = x_142.tint_symbol_20;
+fn tint_symbol_18(tint_symbol_14_3 : vec2f, tint_symbol_15_1 : tint_symbol) -> vec2f {
+  let x_117 = tint_symbol_16(tint_symbol_14_3);
+  let x_118 = tint_symbol_13(x_117, tint_symbol_15_1);
+  let x_119 = tint_symbol_17(x_118);
+  return x_119;
+}
+
+fn tint_symbol_23_inner(tint_symbol_24 : vec2f, tint_symbol_22 : vec4f) -> tint_symbol_20 {
+  var tint_symbol_25 = tint_symbol_20(vec4f(), vec4f());
+  let x_134 = tint_symbol_8.inner.tint_symbol_6;
+  let x_129 = tint_symbol_18(tint_symbol_24, x_134);
+  let x_139 = (x_129 * tint_symbol_8.inner.tint_symbol_7);
+  tint_symbol_25.tint_symbol_21 = vec4f(x_139.x, x_139.y, 0.0f, 1.0f);
+  tint_symbol_25.tint_symbol_22 = tint_symbol_22;
+  let x_146 = tint_symbol_25;
+  return x_146;
+}
+
+fn tint_symbol_23_1() {
+  let x_152 = tint_symbol_24_1;
+  let x_153 = tint_symbol_22_1;
+  let x_151 = tint_symbol_23_inner(x_152, x_153);
+  tint_symbol_21_1 = x_151.tint_symbol_21;
+  tint_symbol_22_2 = x_151.tint_symbol_22;
   return;
 }
 
-struct tint_symbol_21_out {
+struct tint_symbol_23_out {
   @builtin(position)
-  tint_symbol_19_1_1 : vec4f,
+  tint_symbol_21_1_1 : vec4f,
   @location(0)
-  tint_symbol_20_2_1 : vec4f,
+  tint_symbol_22_2_1 : vec4f,
 }
 
 @vertex
-fn vertexMain(@location(0) tint_symbol_22_1_param : vec2f, @location(1) tint_symbol_20_1_param : vec4f) -> tint_symbol_21_out {
+fn vertexMain(@location(0) tint_symbol_24_1_param : vec2f, @location(1) tint_symbol_22_1_param : vec4f) -> tint_symbol_23_out {
+  tint_symbol_24_1 = tint_symbol_24_1_param;
   tint_symbol_22_1 = tint_symbol_22_1_param;
-  tint_symbol_20_1 = tint_symbol_20_1_param;
-  tint_symbol_21_1();
-  return tint_symbol_21_out(tint_symbol_19_1, tint_symbol_20_2);
+  tint_symbol_23_1();
+  return tint_symbol_23_out(tint_symbol_21_1, tint_symbol_22_2);
 }
 
-fn tint_symbol_26_inner(tint_symbol_20_4 : vec4f) -> vec4f {
-  return tint_symbol_20_4;
+fn tint_symbol_28_inner(tint_symbol_22_4 : vec4f) -> vec4f {
+  return tint_symbol_22_4;
 }
 
-fn tint_symbol_26_1() {
-  let x_154 = tint_symbol_20_3;
-  let x_153 = tint_symbol_26_inner(x_154);
-  value = x_153;
+fn tint_symbol_28_1() {
+  let x_163 = tint_symbol_22_3;
+  let x_162 = tint_symbol_28_inner(x_163);
+  value = x_162;
   return;
 }
 
-struct tint_symbol_26_out {
+struct tint_symbol_28_out {
   @location(0)
   value_1 : vec4f,
 }
 
 @fragment
-fn fragmentMain(@location(0) tint_symbol_20_3_param : vec4f) -> tint_symbol_26_out {
-  tint_symbol_20_3 = tint_symbol_20_3_param;
-  tint_symbol_26_1();
-  return tint_symbol_26_out(value);
+fn fragmentMain(@location(0) tint_symbol_22_3_param : vec4f) -> tint_symbol_28_out {
+  tint_symbol_22_3 = tint_symbol_22_3_param;
+  tint_symbol_28_1();
+  return tint_symbol_28_out(value);
 }
