@@ -711,7 +711,7 @@ fn tint_symbol_123(tint_symbol_119_2 : vec2i, tint_symbol_58_3 : vec4f) {
 
 fn tint_symbol_125(tint_symbol_119_3 : vec2i, tint_symbol_23_5 : vec3f, tint_symbol_28_11 : vec3f) {
   var tint_symbol_126 = vec3f();
-  var tint_symbol_113_2 = 0u;
+  var tint_symbol_113_2 = 0i;
   var tint_symbol_127 = vec3f();
   var tint_symbol_128 = vec3f();
   var tint_symbol_58_4 = vec2f();
@@ -719,9 +719,9 @@ fn tint_symbol_125(tint_symbol_119_3 : vec2i, tint_symbol_23_5 : vec3f, tint_sym
   var tint_symbol_128_1 = vec3f();
   var tint_symbol_58_5 = vec4f();
   tint_symbol_126 = vec3f(-1.0f, -1.0f, 0.0f);
-  tint_symbol_113_2 = 0u;
+  tint_symbol_113_2 = 0i;
   loop {
-    if (!((tint_symbol_113_2 < 2u))) {
+    if (!((tint_symbol_113_2 < 2i))) {
       break;
     }
     let x_2051 = tint_symbol_96.inner[tint_symbol_113_2].tint_symbol_83;
@@ -748,7 +748,7 @@ fn tint_symbol_125(tint_symbol_119_3 : vec2i, tint_symbol_23_5 : vec3f, tint_sym
     }
 
     continuing {
-      tint_symbol_113_2 = (tint_symbol_113_2 + 1u);
+      tint_symbol_113_2 = (tint_symbol_113_2 + 1i);
     }
   }
   let x_2102 = tint_symbol_98.tint_symbol_83;
@@ -786,24 +786,35 @@ fn tint_symbol_125(tint_symbol_119_3 : vec2i, tint_symbol_23_5 : vec3f, tint_sym
   return;
 }
 
-const x_2165 = vec2f(2.0f);
+const x_2179 = vec2f(2.0f);
 
 fn tint_symbol_129_inner(tint_symbol_130 : vec3u) {
   var tint_symbol_37_1 = vec3f();
-  var tint_symbol_132 = vec3f();
+  var tint_symbol_133 = vec3f();
+  var x_2175 : bool;
+  var x_2176 : bool;
   let x_2162 = bitcast<vec2i>(tint_symbol_130.xy);
-  let x_2170 = (x_2165 / tint_symbol_95.inner.tint_symbol_85.xy);
-  tint_symbol_37_1 = vec3f((((f32(x_2162.x) + 0.5f) * x_2170.x) - 1.0f), (((f32(x_2162.y) + 0.5f) * x_2170.y) - 1.0f), 0.0f);
-  tint_symbol_132 = vec3f(0.0f, 0.0f, 1.0f);
-  let x_2188 = tint_symbol_37_1;
-  let x_2189 = tint_symbol_132;
-  tint_symbol_125(x_2162, x_2188, x_2189);
+  let x_2165 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_97)));
+  let x_2170 = (x_2162.x < x_2165.x);
+  x_2176 = x_2170;
+  if (x_2170) {
+    x_2175 = (x_2162.y < x_2165.y);
+    x_2176 = x_2175;
+  }
+  if (x_2176) {
+    let x_2184 = (x_2179 / tint_symbol_95.inner.tint_symbol_85.xy);
+    tint_symbol_37_1 = vec3f((((f32(x_2162.x) + 0.5f) * x_2184.x) - 1.0f), (((f32(x_2162.y) + 0.5f) * x_2184.y) - 1.0f), 0.0f);
+    tint_symbol_133 = vec3f(0.0f, 0.0f, 1.0f);
+    let x_2202 = tint_symbol_37_1;
+    let x_2203 = tint_symbol_133;
+    tint_symbol_125(x_2162, x_2202, x_2203);
+  }
   return;
 }
 
 fn tint_symbol_129_1() {
-  let x_2194 = tint_symbol_130_1;
-  tint_symbol_129_inner(x_2194);
+  let x_2208 = tint_symbol_130_1;
+  tint_symbol_129_inner(x_2208);
   return;
 }
 
@@ -813,29 +824,40 @@ fn computeOrthogonalMain(@builtin(global_invocation_id) tint_symbol_130_1_param 
   tint_symbol_129_1();
 }
 
-fn tint_symbol_133_inner(tint_symbol_130_3 : vec3u) {
+fn tint_symbol_134_inner(tint_symbol_130_3 : vec3u) {
   var tint_symbol_37_2 = vec3f();
-  var tint_symbol_134 = vec3f();
-  var tint_symbol_132_1 = vec3f();
-  let x_2198 = bitcast<vec2i>(tint_symbol_130_3.xy);
-  let x_2205 = ((x_2165 / tint_symbol_95.inner.tint_symbol_85) * tint_symbol_95.inner.tint_symbol_84);
-  tint_symbol_37_2 = vec3f();
-  tint_symbol_134 = vec3f((((f32(x_2198.x) + 0.5f) * x_2205.x) - tint_symbol_95.inner.tint_symbol_84.x), (((f32(x_2198.y) + 0.5f) * x_2205.y) - tint_symbol_95.inner.tint_symbol_84.y), 1.0f);
-  tint_symbol_132_1 = normalize(tint_symbol_134);
-  let x_2230 = tint_symbol_37_2;
-  let x_2231 = tint_symbol_132_1;
-  tint_symbol_125(x_2198, x_2230, x_2231);
+  var tint_symbol_135 = vec3f();
+  var tint_symbol_133_1 = vec3f();
+  var x_2224 : bool;
+  var x_2225 : bool;
+  let x_2212 = bitcast<vec2i>(tint_symbol_130_3.xy);
+  let x_2214 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_97)));
+  let x_2219 = (x_2212.x < x_2214.x);
+  x_2225 = x_2219;
+  if (x_2219) {
+    x_2224 = (x_2212.y < x_2214.y);
+    x_2225 = x_2224;
+  }
+  if (x_2225) {
+    let x_2233 = ((x_2179 / tint_symbol_95.inner.tint_symbol_85) * tint_symbol_95.inner.tint_symbol_84);
+    tint_symbol_37_2 = vec3f();
+    tint_symbol_135 = vec3f((((f32(x_2212.x) + 0.5f) * x_2233.x) - tint_symbol_95.inner.tint_symbol_84.x), (((f32(x_2212.y) + 0.5f) * x_2233.y) - tint_symbol_95.inner.tint_symbol_84.y), 1.0f);
+    tint_symbol_133_1 = normalize(tint_symbol_135);
+    let x_2258 = tint_symbol_37_2;
+    let x_2259 = tint_symbol_133_1;
+    tint_symbol_125(x_2212, x_2258, x_2259);
+  }
   return;
 }
 
-fn tint_symbol_133_1() {
-  let x_2235 = tint_symbol_130_2;
-  tint_symbol_133_inner(x_2235);
+fn tint_symbol_134_1() {
+  let x_2263 = tint_symbol_130_2;
+  tint_symbol_134_inner(x_2263);
   return;
 }
 
 @compute @workgroup_size(16i, 16i, 1i)
 fn computeProjectiveMain(@builtin(global_invocation_id) tint_symbol_130_2_param : vec3u) {
   tint_symbol_130_2 = tint_symbol_130_2_param;
-  tint_symbol_133_1();
+  tint_symbol_134_1();
 }
