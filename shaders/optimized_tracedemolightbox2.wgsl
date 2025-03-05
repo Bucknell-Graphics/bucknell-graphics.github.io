@@ -137,7 +137,7 @@ struct tint_symbol_86 {
   tint_symbol_87 : vec3f,
 }
 
-var<private> tint_symbol_107_1 : vec3u;
+var<private> tint_symbol_108_1 : vec3u;
 
 @group(0) @binding(0) var<uniform> tint_symbol_41 : tint_symbol_41_block;
 
@@ -976,7 +976,7 @@ fn tint_symbol_88(tint_symbol_67_3 : vec3f, tint_symbol_50_13 : vec3f, tint_symb
   return x_1244;
 }
 
-const x_1762 = vec4f(0.10000000149011611938f, 0.10000000149011611938f, 0.10000000149011611938f, 1.0f);
+const x_1825 = vec4f(0.10000000149011611938f, 0.10000000149011611938f, 0.10000000149011611938f, 1.0f);
 
 fn tint_symbol_94(tint_symbol_67_4 : vec3f, tint_symbol_50_14 : vec3f) -> vec4f {
   var tint_symbol_95 = vec3f();
@@ -1002,6 +1002,9 @@ fn tint_symbol_94(tint_symbol_67_4 : vec3f, tint_symbol_50_14 : vec3f) -> vec4f 
   var tint_symbol_102 = vec4f();
   var tint_symbol_103 = vec3f();
   var tint_symbol_104 = tint_symbol_86(vec4f(), vec3f());
+  var tint_symbol_64_2 = 0i;
+  var tint_symbol_106 = vec4f();
+  var tint_symbol_64_3 = 0i;
   tint_symbol_95 = vec3f(-1.0f);
   tint_symbol_64_1 = 0i;
   loop {
@@ -1344,69 +1347,127 @@ fn tint_symbol_94(tint_symbol_67_4 : vec3f, tint_symbol_50_14 : vec3f) -> vec4f 
         tint_symbol_102 = vec4f();
       }
     }
-    tint_symbol_77_4 = ((tint_symbol_77_4 * 0.5f) + (tint_symbol_102 * 0.5f));
+    if ((tint_symbol_47.inner.z > 2i)) {
+      tint_symbol_64_2 = 0i;
+      loop {
+        if (!((tint_symbol_64_2 < 3i))) {
+          break;
+        }
+        if ((tint_symbol_104.tint_symbol_36[tint_symbol_64_2] >= 1.0f)) {
+          let x_1762 = tint_symbol_64_2;
+          tint_symbol_104.tint_symbol_36[x_1762] = 1.0f;
+        } else {
+          if ((tint_symbol_104.tint_symbol_36[tint_symbol_64_2] >= 0.80000001192092895508f)) {
+            let x_1772 = tint_symbol_64_2;
+            tint_symbol_104.tint_symbol_36[x_1772] = 0.80000001192092895508f;
+          } else {
+            if ((tint_symbol_104.tint_symbol_36[tint_symbol_64_2] >= 0.5f)) {
+              let x_1781 = tint_symbol_64_2;
+              tint_symbol_104.tint_symbol_36[x_1781] = 0.5f;
+            } else {
+              if ((tint_symbol_104.tint_symbol_36[tint_symbol_64_2] >= 0.20000000298023223877f)) {
+                let x_1791 = tint_symbol_64_2;
+                tint_symbol_104.tint_symbol_36[x_1791] = 0.20000000298023223877f;
+              } else {
+                let x_1793 = tint_symbol_64_2;
+                tint_symbol_104.tint_symbol_36[x_1793] = 0.0f;
+              }
+            }
+          }
+        }
+
+        continuing {
+          tint_symbol_64_2 = (tint_symbol_64_2 + 1i);
+        }
+      }
+      tint_symbol_77_4 = ((tint_symbol_77_4 * 0.25f) + (tint_symbol_102 * 0.75f));
+    } else {
+      tint_symbol_77_4 = ((tint_symbol_77_4 * 0.5f) + (tint_symbol_102 * 0.5f));
+    }
     if ((tint_symbol_47.inner.z > 1i)) {
-      tint_symbol_77_4 = (tint_symbol_77_4 + ((x_1762 * tint_symbol_104.tint_symbol_36) * pow(max(dot((tint_symbol_104.tint_symbol_87 + (tint_symbol_103 * (2.0f * max(dot(-(tint_symbol_104.tint_symbol_87), tint_symbol_103), 0.0f)))), -(tint_symbol_97_4)), 0.0f), 0.5f)));
-      tint_symbol_77_4 = (tint_symbol_77_4 + (x_1762 * pow(tint_symbol_104.tint_symbol_36, vec4f(0.25f, 0.25f, 0.25f, 1.0f))));
+      tint_symbol_106 = ((x_1825 * tint_symbol_104.tint_symbol_36) * pow(max(dot((tint_symbol_104.tint_symbol_87 + (tint_symbol_103 * (2.0f * max(dot(-(tint_symbol_104.tint_symbol_87), tint_symbol_103), 0.0f)))), -(tint_symbol_97_4)), 0.0f), 0.5f));
+      if ((tint_symbol_47.inner.z > 2i)) {
+        tint_symbol_64_3 = 0i;
+        loop {
+          if (!((tint_symbol_64_3 < 3i))) {
+            break;
+          }
+          if ((tint_symbol_106[tint_symbol_64_3] > 0.5f)) {
+            let x_1859 = tint_symbol_64_3;
+            tint_symbol_106[x_1859] = 1.0f;
+          } else {
+            let x_1861 = tint_symbol_64_3;
+            tint_symbol_106[x_1861] = 0.0f;
+          }
+
+          continuing {
+            tint_symbol_64_3 = (tint_symbol_64_3 + 1i);
+          }
+        }
+        tint_symbol_77_4 = (tint_symbol_77_4 + tint_symbol_106);
+      } else {
+        tint_symbol_77_4 = (tint_symbol_77_4 + tint_symbol_106);
+      }
+      tint_symbol_77_4 = (tint_symbol_77_4 + (x_1825 * pow(tint_symbol_104.tint_symbol_36, vec4f(0.25f, 0.25f, 0.25f, 1.0f))));
     }
   }
   tint_symbol_77_4.w = 1.0f;
-  let x_1781 = tint_symbol_77_4;
-  return x_1781;
+  let x_1879 = tint_symbol_77_4;
+  return x_1879;
 }
 
-const x_1812 = vec2f(2.0f);
+const x_1910 = vec2f(2.0f);
 
-fn tint_symbol_106_inner(tint_symbol_107 : vec3u) {
+fn tint_symbol_107_inner(tint_symbol_108 : vec3u) {
   var tint_symbol_77_5 = vec4f();
-  var tint_symbol_111 = vec3f();
   var tint_symbol_112 = vec3f();
-  var tint_symbol_111_1 = vec3f();
   var tint_symbol_113 = vec3f();
   var tint_symbol_112_1 = vec3f();
-  var x_1801 : bool;
-  var x_1802 : bool;
-  let x_1787 = bitcast<vec2i>(tint_symbol_107.xy);
-  let x_1791 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_43)));
-  let x_1796 = (x_1787.x < x_1791.x);
-  x_1802 = x_1796;
-  if (x_1796) {
-    x_1801 = (x_1787.y < x_1791.y);
-    x_1802 = x_1801;
+  var tint_symbol_114 = vec3f();
+  var tint_symbol_113_1 = vec3f();
+  var x_1899 : bool;
+  var x_1900 : bool;
+  let x_1885 = bitcast<vec2i>(tint_symbol_108.xy);
+  let x_1889 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_43)));
+  let x_1894 = (x_1885.x < x_1889.x);
+  x_1900 = x_1894;
+  if (x_1894) {
+    x_1899 = (x_1885.y < x_1889.y);
+    x_1900 = x_1899;
   }
-  if (x_1802) {
+  if (x_1900) {
     if ((tint_symbol_47.inner[0i] == 0i)) {
-      let x_1817 = (x_1812 / tint_symbol_41.inner.tint_symbol_23.xy);
-      tint_symbol_111 = vec3f((((f32(x_1787.x) + 0.5f) * x_1817.x) - 1.0f), (((f32(x_1787.y) + 0.5f) * x_1817.y) - 1.0f), 0.0f);
-      tint_symbol_112 = x_954;
-      let x_1834 = tint_symbol_111;
-      let x_1835 = tint_symbol_112;
-      let x_1833 = tint_symbol_94(x_1834, x_1835);
-      tint_symbol_77_5 = x_1833;
+      let x_1915 = (x_1910 / tint_symbol_41.inner.tint_symbol_23.xy);
+      tint_symbol_112 = vec3f((((f32(x_1885.x) + 0.5f) * x_1915.x) - 1.0f), (((f32(x_1885.y) + 0.5f) * x_1915.y) - 1.0f), 0.0f);
+      tint_symbol_113 = x_954;
+      let x_1932 = tint_symbol_112;
+      let x_1933 = tint_symbol_113;
+      let x_1931 = tint_symbol_94(x_1932, x_1933);
+      tint_symbol_77_5 = x_1931;
     } else {
-      let x_1841 = ((x_1812 / tint_symbol_41.inner.tint_symbol_23) * tint_symbol_41.inner.tint_symbol_22);
-      tint_symbol_111_1 = vec3f();
-      tint_symbol_113 = vec3f((((f32(x_1787.x) + 0.5f) * x_1841.x) - tint_symbol_41.inner.tint_symbol_22.x), (((f32(x_1787.y) + 0.5f) * x_1841.y) - tint_symbol_41.inner.tint_symbol_22.y), 1.0f);
-      tint_symbol_112_1 = normalize(tint_symbol_113);
-      let x_1865 = tint_symbol_111_1;
-      let x_1866 = tint_symbol_112_1;
-      let x_1864 = tint_symbol_94(x_1865, x_1866);
-      tint_symbol_77_5 = x_1864;
+      let x_1939 = ((x_1910 / tint_symbol_41.inner.tint_symbol_23) * tint_symbol_41.inner.tint_symbol_22);
+      tint_symbol_112_1 = vec3f();
+      tint_symbol_114 = vec3f((((f32(x_1885.x) + 0.5f) * x_1939.x) - tint_symbol_41.inner.tint_symbol_22.x), (((f32(x_1885.y) + 0.5f) * x_1939.y) - tint_symbol_41.inner.tint_symbol_22.y), 1.0f);
+      tint_symbol_113_1 = normalize(tint_symbol_114);
+      let x_1963 = tint_symbol_112_1;
+      let x_1964 = tint_symbol_113_1;
+      let x_1962 = tint_symbol_94(x_1963, x_1964);
+      tint_symbol_77_5 = x_1962;
     }
-    let x_1869 = tint_symbol_77_5;
-    textureStore(tint_symbol_43, x_1787, x_1869);
+    let x_1967 = tint_symbol_77_5;
+    textureStore(tint_symbol_43, x_1885, x_1967);
   }
   return;
 }
 
-fn tint_symbol_106_1() {
-  let x_1874 = tint_symbol_107_1;
-  tint_symbol_106_inner(x_1874);
+fn tint_symbol_107_1() {
+  let x_1972 = tint_symbol_108_1;
+  tint_symbol_107_inner(x_1972);
   return;
 }
 
 @compute @workgroup_size(16i, 16i, 1i)
-fn computeMain(@builtin(global_invocation_id) tint_symbol_107_1_param : vec3u) {
-  tint_symbol_107_1 = tint_symbol_107_1_param;
-  tint_symbol_106_1();
+fn computeMain(@builtin(global_invocation_id) tint_symbol_108_1_param : vec3u) {
+  tint_symbol_108_1 = tint_symbol_108_1_param;
+  tint_symbol_107_1();
 }
