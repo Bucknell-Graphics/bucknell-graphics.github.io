@@ -217,7 +217,7 @@ struct tint_symbol_187 {
   tint_symbol_189 : f32,
 }
 
-var<private> tint_symbol_208_1 : vec3u;
+var<private> tint_symbol_209_1 : vec3u;
 
 @group(0) @binding(0) var<uniform> tint_symbol_103 : tint_symbol_103_block;
 
@@ -1660,8 +1660,13 @@ fn tint_symbol_185(tint_symbol_186 : tint_symbol_177, tint_symbol_174_2 : vec3f,
       tint_symbol_127_7.tint_symbol_147 = vec4f();
     }
   }
-  let x_3328 = tint_symbol_127_7;
-  return x_3328;
+  let x_3329 = tint_symbol_127_7.tint_symbol_184;
+  let x_3332 = tint_symbol_103.inner.tint_symbol_83;
+  let x_3330 = tint_symbol_21(x_3332);
+  let x_3334 = tint_symbol_61(x_3329, x_3330);
+  tint_symbol_127_7.tint_symbol_184 = x_3334;
+  let x_3335 = tint_symbol_127_7;
+  return x_3335;
 }
 
 fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_symbol_63_3 : bool) -> tint_symbol_187 {
@@ -1676,107 +1681,107 @@ fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_sy
   var tint_symbol_136_2 = 0i;
   var tint_symbol_198 = vec4f();
   var tint_symbol_136_3 = 0i;
-  var x_3356 : bool;
-  var x_3357 : bool;
-  var x_3362 : bool;
   var x_3363 : bool;
-  let x_3341 = tint_symbol_173(tint_symbol_23_11, tint_symbol_28_25);
-  tint_symbol_174_3 = x_3341;
+  var x_3364 : bool;
+  var x_3369 : bool;
+  var x_3370 : bool;
+  let x_3348 = tint_symbol_173(tint_symbol_23_11, tint_symbol_28_25);
+  tint_symbol_174_3 = x_3348;
   tint_symbol_127_8.tint_symbol_189 = tint_symbol_174_3.z;
-  let x_3347 = tint_symbol_174_3;
-  let x_3346 = tint_symbol_181(tint_symbol_23_11, tint_symbol_28_25, x_3347);
-  tint_symbol_186_1 = x_3346;
-  let x_3351 = (tint_symbol_174_3.z < 0.0f);
-  x_3357 = x_3351;
-  if (x_3351) {
+  let x_3354 = tint_symbol_174_3;
+  let x_3353 = tint_symbol_181(tint_symbol_23_11, tint_symbol_28_25, x_3354);
+  tint_symbol_186_1 = x_3353;
+  let x_3358 = (tint_symbol_174_3.z < 0.0f);
+  x_3364 = x_3358;
+  if (x_3358) {
   } else {
-    x_3356 = (tint_symbol_186_1.tint_symbol_180 > 0.0f);
-    x_3357 = x_3356;
+    x_3363 = (tint_symbol_186_1.tint_symbol_180 > 0.0f);
+    x_3364 = x_3363;
   }
-  x_3363 = x_3357;
-  if (x_3357) {
+  x_3370 = x_3364;
+  if (x_3364) {
   } else {
-    x_3362 = (tint_symbol_109.inner.z == 0i);
-    x_3363 = x_3362;
+    x_3369 = (tint_symbol_109.inner.z == 0i);
+    x_3370 = x_3369;
   }
-  if (x_3363) {
+  if (x_3370) {
     tint_symbol_127_8.tint_symbol_147 = tint_symbol_186_1.tint_symbol_147;
     tint_symbol_127_8.tint_symbol_189 = -1.0f;
     tint_return_flag_7 = true;
     tint_return_value_7 = tint_symbol_127_8;
   }
   if (!(tint_return_flag_7)) {
-    var x_3449 : bool;
-    var x_3460 : bool;
-    var x_3463 : bool;
-    var x_3464 : bool;
-    var x_3514 : bool;
-    var x_3515 : bool;
-    var x_3580 : bool;
-    var x_3581 : bool;
+    var x_3456 : bool;
+    var x_3467 : bool;
+    var x_3470 : bool;
+    var x_3471 : bool;
+    var x_3521 : bool;
+    var x_3522 : bool;
+    var x_3587 : bool;
+    var x_3588 : bool;
     if ((tint_symbol_109.inner.z > 0i)) {
-      let x_3381 = tint_symbol_186_1;
-      let x_3382 = tint_symbol_174_3;
-      let x_3380 = tint_symbol_185(x_3381, x_3382, tint_symbol_63_3);
-      tint_symbol_191 = x_3380;
+      let x_3388 = tint_symbol_186_1;
+      let x_3389 = tint_symbol_174_3;
+      let x_3387 = tint_symbol_185(x_3388, x_3389, tint_symbol_63_3);
+      tint_symbol_191 = x_3387;
       tint_symbol_127_8.tint_symbol_188 = (tint_symbol_23_11 + (tint_symbol_28_25 * tint_symbol_174_3.x));
-      let x_3391 = tint_symbol_103.inner.tint_symbol_83;
-      let x_3389 = tint_symbol_21(x_3391);
-      let x_3394 = tint_symbol_110.inner.tint_symbol_99;
-      let x_3392 = tint_symbol_60(x_3394.xyz, x_3389);
       let x_3398 = tint_symbol_103.inner.tint_symbol_83;
       let x_3396 = tint_symbol_21(x_3398);
-      let x_3401 = tint_symbol_110.inner.tint_symbol_100;
-      let x_3399 = tint_symbol_61(x_3401.xyz, x_3396);
-      let x_3405 = tint_symbol_127_8.tint_symbol_188;
-      let x_3407 = tint_symbol_191.tint_symbol_184;
-      let x_3403 = tint_symbol_168(x_3392, x_3399, x_3405, x_3407);
-      tint_symbol_194 = x_3403;
+      let x_3401 = tint_symbol_110.inner.tint_symbol_99;
+      let x_3399 = tint_symbol_60(x_3401.xyz, x_3396);
+      let x_3405 = tint_symbol_103.inner.tint_symbol_83;
+      let x_3403 = tint_symbol_21(x_3405);
+      let x_3408 = tint_symbol_110.inner.tint_symbol_100;
+      let x_3406 = tint_symbol_61(x_3408.xyz, x_3403);
+      let x_3412 = tint_symbol_127_8.tint_symbol_188;
+      let x_3414 = tint_symbol_191.tint_symbol_184;
+      let x_3410 = tint_symbol_168(x_3399, x_3406, x_3412, x_3414);
+      tint_symbol_194 = x_3410;
       tint_symbol_191.tint_symbol_183.tint_symbol_98 = tint_symbol_194.tint_symbol_98;
       tint_symbol_191.tint_symbol_183.tint_symbol_162 = tint_symbol_194.tint_symbol_162;
-      let x_3417 = tint_symbol_174_3.z;
-      let x_3415 = tint_ftoi(x_3417);
-      if ((x_3415 == 4i)) {
+      let x_3424 = tint_symbol_174_3.z;
+      let x_3422 = tint_ftoi(x_3424);
+      if ((x_3422 == 4i)) {
         tint_symbol_191.tint_symbol_183.tint_symbol_166 = 1.0f;
       } else {
-        let x_3426 = tint_symbol_174_3.z;
-        let x_3424 = tint_ftoi(x_3426);
-        if ((x_3424 == 2i)) {
+        let x_3433 = tint_symbol_174_3.z;
+        let x_3431 = tint_ftoi(x_3433);
+        if ((x_3431 == 2i)) {
           tint_symbol_191.tint_symbol_183.tint_symbol_166 = 0.25f;
         } else {
           tint_symbol_191.tint_symbol_183.tint_symbol_166 = 0.0f;
         }
       }
-      let x_3435 = tint_symbol_174_3.z;
-      let x_3433 = tint_ftoi(x_3435);
-      if ((x_3433 == 3i)) {
+      let x_3442 = tint_symbol_174_3.z;
+      let x_3440 = tint_ftoi(x_3442);
+      if ((x_3440 == 3i)) {
         tint_symbol_191.tint_symbol_183.tint_symbol_167 = 0.05000000074505805969f;
         tint_symbol_191.tint_symbol_183.tint_symbol_166 = (1.0f - tint_symbol_191.tint_symbol_183.tint_symbol_167);
       }
-      var x_3458 : bool;
-      var x_3459 : bool;
-      let x_3446 = (tint_symbol_109.inner.w > 0i);
-      x_3460 = x_3446;
-      if (x_3446) {
-        let x_3452 = (tint_symbol_174_3.z == 0.0f);
-        x_3459 = x_3452;
-        if (x_3452) {
-          x_3458 = (tint_symbol_174_3.y == 5.0f);
-          x_3459 = x_3458;
+      var x_3465 : bool;
+      var x_3466 : bool;
+      let x_3453 = (tint_symbol_109.inner.w > 0i);
+      x_3467 = x_3453;
+      if (x_3453) {
+        let x_3459 = (tint_symbol_174_3.z == 0.0f);
+        x_3466 = x_3459;
+        if (x_3459) {
+          x_3465 = (tint_symbol_174_3.y == 5.0f);
+          x_3466 = x_3465;
         }
-        x_3449 = !(x_3459);
-        x_3460 = x_3449;
+        x_3456 = !(x_3466);
+        x_3467 = x_3456;
       }
-      x_3464 = x_3460;
-      if (x_3460) {
-        x_3463 = !(tint_symbol_63_3);
-        x_3464 = x_3463;
+      x_3471 = x_3467;
+      if (x_3467) {
+        x_3470 = !(tint_symbol_63_3);
+        x_3471 = x_3470;
       }
-      if (x_3464) {
-        let x_3468 = tint_symbol_127_8.tint_symbol_188;
-        let x_3476 = tint_symbol_191.tint_symbol_183.tint_symbol_162;
-        let x_3473 = tint_symbol_173((x_3468 - ((tint_symbol_28_25 * 0.00000000999999993923f) * 100000.0f)), -(x_3476));
-        tint_symbol_196 = x_3473;
+      if (x_3471) {
+        let x_3475 = tint_symbol_127_8.tint_symbol_188;
+        let x_3483 = tint_symbol_191.tint_symbol_183.tint_symbol_162;
+        let x_3480 = tint_symbol_173((x_3475 - ((tint_symbol_28_25 * 0.00000000999999993923f) * 100000.0f)), -(x_3483));
+        tint_symbol_196 = x_3480;
         if ((tint_symbol_196.z > 0.0f)) {
           if ((tint_symbol_196.z != 3.0f)) {
             tint_symbol_191.tint_symbol_183.tint_symbol_98 = (tint_symbol_191.tint_symbol_183.tint_symbol_98 * max(pow(min(tint_symbol_196.x, 1.0f), 0.85000002384185791016f), 0.10000000149011611938f));
@@ -1785,36 +1790,36 @@ fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_sy
           }
         }
       }
-      let x_3511 = (tint_symbol_109.inner.z > 2i);
-      x_3515 = x_3511;
-      if (x_3511) {
-        x_3514 = !(tint_symbol_63_3);
-        x_3515 = x_3514;
+      let x_3518 = (tint_symbol_109.inner.z > 2i);
+      x_3522 = x_3518;
+      if (x_3518) {
+        x_3521 = !(tint_symbol_63_3);
+        x_3522 = x_3521;
       }
-      if (x_3515) {
+      if (x_3522) {
         tint_symbol_136_2 = 0i;
         loop {
           if (!((tint_symbol_136_2 < 3i))) {
             break;
           }
           if ((tint_symbol_191.tint_symbol_183.tint_symbol_98[tint_symbol_136_2] >= 1.0f)) {
-            let x_3535 = tint_symbol_136_2;
-            tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3535] = 1.0f;
+            let x_3542 = tint_symbol_136_2;
+            tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3542] = 1.0f;
           } else {
             if ((tint_symbol_191.tint_symbol_183.tint_symbol_98[tint_symbol_136_2] >= 0.80000001192092895508f)) {
-              let x_3544 = tint_symbol_136_2;
-              tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3544] = 0.80000001192092895508f;
+              let x_3551 = tint_symbol_136_2;
+              tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3551] = 0.80000001192092895508f;
             } else {
               if ((tint_symbol_191.tint_symbol_183.tint_symbol_98[tint_symbol_136_2] >= 0.5f)) {
-                let x_3553 = tint_symbol_136_2;
-                tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3553] = 0.5f;
+                let x_3560 = tint_symbol_136_2;
+                tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3560] = 0.5f;
               } else {
                 if ((tint_symbol_191.tint_symbol_183.tint_symbol_98[tint_symbol_136_2] >= 0.20000000298023223877f)) {
-                  let x_3563 = tint_symbol_136_2;
-                  tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3563] = 0.20000000298023223877f;
+                  let x_3570 = tint_symbol_136_2;
+                  tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3570] = 0.20000000298023223877f;
                 } else {
-                  let x_3565 = tint_symbol_136_2;
-                  tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3565] = 0.0f;
+                  let x_3572 = tint_symbol_136_2;
+                  tint_symbol_191.tint_symbol_183.tint_symbol_98[x_3572] = 0.0f;
                 }
               }
             }
@@ -1826,13 +1831,13 @@ fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_sy
         }
       }
       tint_symbol_127_8.tint_symbol_147 = (tint_symbol_191.tint_symbol_147 * tint_symbol_191.tint_symbol_183.tint_symbol_98);
-      let x_3577 = (tint_symbol_109.inner.z > 1i);
-      x_3581 = x_3577;
-      if (x_3577) {
-        x_3580 = !(tint_symbol_63_3);
-        x_3581 = x_3580;
+      let x_3584 = (tint_symbol_109.inner.z > 1i);
+      x_3588 = x_3584;
+      if (x_3584) {
+        x_3587 = !(tint_symbol_63_3);
+        x_3588 = x_3587;
       }
-      if (x_3581) {
+      if (x_3588) {
         tint_symbol_198 = ((tint_symbol_191.tint_symbol_183.tint_symbol_164 * tint_symbol_191.tint_symbol_183.tint_symbol_98) * pow(max(dot(reflect(tint_symbol_191.tint_symbol_183.tint_symbol_162, tint_symbol_191.tint_symbol_184), -(tint_symbol_28_25)), 0.00000000999999993923f), tint_symbol_191.tint_symbol_183.tint_symbol_163));
         if ((tint_symbol_109.inner.z > 2i)) {
           tint_symbol_136_3 = 0i;
@@ -1841,23 +1846,23 @@ fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_sy
               break;
             }
             if ((tint_symbol_198[tint_symbol_136_3] >= 1.0f)) {
-              let x_3624 = tint_symbol_136_3;
-              tint_symbol_198[x_3624] = 1.0f;
+              let x_3631 = tint_symbol_136_3;
+              tint_symbol_198[x_3631] = 1.0f;
             } else {
               if ((tint_symbol_198[tint_symbol_136_3] >= 0.80000001192092895508f)) {
-                let x_3633 = tint_symbol_136_3;
-                tint_symbol_198[x_3633] = 0.80000001192092895508f;
+                let x_3640 = tint_symbol_136_3;
+                tint_symbol_198[x_3640] = 0.80000001192092895508f;
               } else {
                 if ((tint_symbol_198[tint_symbol_136_3] >= 0.5f)) {
-                  let x_3642 = tint_symbol_136_3;
-                  tint_symbol_198[x_3642] = 0.5f;
+                  let x_3649 = tint_symbol_136_3;
+                  tint_symbol_198[x_3649] = 0.5f;
                 } else {
                   if ((tint_symbol_198[tint_symbol_136_3] >= 0.20000000298023223877f)) {
-                    let x_3651 = tint_symbol_136_3;
-                    tint_symbol_198[x_3651] = 0.20000000298023223877f;
+                    let x_3658 = tint_symbol_136_3;
+                    tint_symbol_198[x_3658] = 0.20000000298023223877f;
                   } else {
-                    let x_3653 = tint_symbol_136_3;
-                    tint_symbol_198[x_3653] = 0.0f;
+                    let x_3660 = tint_symbol_136_3;
+                    tint_symbol_198[x_3660] = 0.0f;
                   }
                 }
               }
@@ -1882,8 +1887,8 @@ fn tint_symbol_190(tint_symbol_23_11 : vec3f, tint_symbol_28_25 : vec3f, tint_sy
     tint_return_flag_7 = true;
     tint_return_value_7 = tint_symbol_127_8;
   }
-  let x_3692 = tint_return_value_7;
-  return x_3692;
+  let x_3699 = tint_return_value_7;
+  return x_3699;
 }
 
 fn tint_symbol_199(tint_symbol_23_12 : vec3f, tint_symbol_28_26 : vec3f) -> vec4f {
@@ -1906,19 +1911,20 @@ fn tint_symbol_199(tint_symbol_23_12 : vec3f, tint_symbol_28_26 : vec3f) -> vec4
     if (!((tint_symbol_205 < tint_symbol_111.inner.w))) {
       break;
     }
-    let x_3718 = tint_symbol_201;
-    let x_3719 = tint_symbol_202;
-    let x_3720 = tint_symbol_63_4;
-    let x_3717 = tint_symbol_190(x_3718, x_3719, x_3720);
-    tint_symbol_206 = x_3717;
+    let x_3725 = tint_symbol_201;
+    let x_3726 = tint_symbol_202;
+    let x_3727 = tint_symbol_63_4;
+    let x_3724 = tint_symbol_190(x_3725, x_3726, x_3727);
+    tint_symbol_206 = x_3724;
     if ((tint_symbol_206.tint_symbol_189 < 0.0f)) {
       tint_symbol_200 = (tint_symbol_200 + tint_symbol_206.tint_symbol_147);
       break;
     }
     if ((tint_symbol_206.tint_symbol_189 == 3.0f)) {
+      let x_3744 = tint_symbol_202;
       tint_symbol_202 = refract(tint_symbol_202, tint_symbol_206.tint_symbol_184, tint_symbol_204);
       if ((length(tint_symbol_202) == 0.0f)) {
-        tint_symbol_202 = reflect(tint_symbol_202, tint_symbol_206.tint_symbol_184);
+        tint_symbol_202 = reflect(x_3744, tint_symbol_206.tint_symbol_184);
       } else {
         tint_symbol_204 = (1.0f / tint_symbol_204);
         tint_symbol_63_4 = !(tint_symbol_63_4);
@@ -1950,62 +1956,62 @@ fn tint_symbol_199(tint_symbol_23_12 : vec3f, tint_symbol_28_26 : vec3f) -> vec4
     }
   }
   tint_symbol_200.w = 1.0f;
-  let x_3830 = tint_symbol_200;
-  return x_3830;
+  let x_3837 = tint_symbol_200;
+  return x_3837;
 }
 
-const x_3861 = vec2f(2.0f);
+const x_3868 = vec2f(2.0f);
 
-fn tint_symbol_207_inner(tint_symbol_208 : vec3u) {
+fn tint_symbol_208_inner(tint_symbol_209 : vec3u) {
   var tint_symbol_147_6 = vec4f();
   var tint_symbol_37_1 = vec3f();
-  var tint_symbol_212 = vec3f();
-  var tint_symbol_37_2 = vec3f();
   var tint_symbol_213 = vec3f();
-  var tint_symbol_212_1 = vec3f();
-  var x_3850 : bool;
-  var x_3851 : bool;
-  let x_3836 = bitcast<vec2i>(tint_symbol_208.xy);
-  let x_3840 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_105)));
-  let x_3845 = (x_3836.x < x_3840.x);
-  x_3851 = x_3845;
-  if (x_3845) {
-    x_3850 = (x_3836.y < x_3840.y);
-    x_3851 = x_3850;
+  var tint_symbol_37_2 = vec3f();
+  var tint_symbol_214 = vec3f();
+  var tint_symbol_213_1 = vec3f();
+  var x_3857 : bool;
+  var x_3858 : bool;
+  let x_3843 = bitcast<vec2i>(tint_symbol_209.xy);
+  let x_3847 = bitcast<vec2i>(vec2i(textureDimensions(tint_symbol_105)));
+  let x_3852 = (x_3843.x < x_3847.x);
+  x_3858 = x_3852;
+  if (x_3852) {
+    x_3857 = (x_3843.y < x_3847.y);
+    x_3858 = x_3857;
   }
-  if (x_3851) {
+  if (x_3858) {
     if ((tint_symbol_109.inner[0i] == 0i)) {
-      let x_3866 = (x_3861 / tint_symbol_103.inner.tint_symbol_85.xy);
-      tint_symbol_37_1 = vec3f((((f32(x_3836.x) + 0.5f) * x_3866.x) - 1.0f), (((f32(x_3836.y) + 0.5f) * x_3866.y) - 1.0f), 0.0f);
-      tint_symbol_212 = x_2226;
-      let x_3883 = tint_symbol_37_1;
-      let x_3884 = tint_symbol_212;
-      let x_3882 = tint_symbol_199(x_3883, x_3884);
-      tint_symbol_147_6 = x_3882;
+      let x_3873 = (x_3868 / tint_symbol_103.inner.tint_symbol_85.xy);
+      tint_symbol_37_1 = vec3f((((f32(x_3843.x) + 0.5f) * x_3873.x) - 1.0f), (((f32(x_3843.y) + 0.5f) * x_3873.y) - 1.0f), 0.0f);
+      tint_symbol_213 = x_2226;
+      let x_3890 = tint_symbol_37_1;
+      let x_3891 = tint_symbol_213;
+      let x_3889 = tint_symbol_199(x_3890, x_3891);
+      tint_symbol_147_6 = x_3889;
     } else {
-      let x_3890 = ((x_3861 / tint_symbol_103.inner.tint_symbol_85) * tint_symbol_103.inner.tint_symbol_84);
+      let x_3897 = ((x_3868 / tint_symbol_103.inner.tint_symbol_85) * tint_symbol_103.inner.tint_symbol_84);
       tint_symbol_37_2 = vec3f();
-      tint_symbol_213 = vec3f((((f32(x_3836.x) + 0.5f) * x_3890.x) - tint_symbol_103.inner.tint_symbol_84.x), (((f32(x_3836.y) + 0.5f) * x_3890.y) - tint_symbol_103.inner.tint_symbol_84.y), 1.0f);
-      tint_symbol_212_1 = normalize(tint_symbol_213);
-      let x_3914 = tint_symbol_37_2;
-      let x_3915 = tint_symbol_212_1;
-      let x_3913 = tint_symbol_199(x_3914, x_3915);
-      tint_symbol_147_6 = x_3913;
+      tint_symbol_214 = vec3f((((f32(x_3843.x) + 0.5f) * x_3897.x) - tint_symbol_103.inner.tint_symbol_84.x), (((f32(x_3843.y) + 0.5f) * x_3897.y) - tint_symbol_103.inner.tint_symbol_84.y), 1.0f);
+      tint_symbol_213_1 = normalize(tint_symbol_214);
+      let x_3921 = tint_symbol_37_2;
+      let x_3922 = tint_symbol_213_1;
+      let x_3920 = tint_symbol_199(x_3921, x_3922);
+      tint_symbol_147_6 = x_3920;
     }
-    let x_3918 = tint_symbol_147_6;
-    textureStore(tint_symbol_105, x_3836, x_3918);
+    let x_3925 = tint_symbol_147_6;
+    textureStore(tint_symbol_105, x_3843, x_3925);
   }
   return;
 }
 
-fn tint_symbol_207_1() {
-  let x_3923 = tint_symbol_208_1;
-  tint_symbol_207_inner(x_3923);
+fn tint_symbol_208_1() {
+  let x_3930 = tint_symbol_209_1;
+  tint_symbol_208_inner(x_3930);
   return;
 }
 
 @compute @workgroup_size(16i, 16i, 1i)
-fn computeMain(@builtin(global_invocation_id) tint_symbol_208_1_param : vec3u) {
-  tint_symbol_208_1 = tint_symbol_208_1_param;
-  tint_symbol_207_1();
+fn computeMain(@builtin(global_invocation_id) tint_symbol_209_1_param : vec3u) {
+  tint_symbol_209_1 = tint_symbol_209_1_param;
+  tint_symbol_208_1();
 }
