@@ -38,7 +38,15 @@ function loadYearTable(year) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Parse URL parameters
+  const params = new URLSearchParams(window.location.search);
+  const urlValue = params.get("year");
+  
+  // Get the selection
   const selector = document.getElementById("year-select");
+  
+  // Assign value if passed by the url
+  if (urlValue && /^(FA|SP)[0-9]{2}$/.test(urlValue)) selector.value = urlValue;
 
   // Load initial year from the select box
   loadYearTable(selector.value);
