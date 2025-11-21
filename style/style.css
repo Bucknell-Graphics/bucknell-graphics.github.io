@@ -142,7 +142,7 @@ a:visited {
 
 /* Center h3 tag and fonts*/
 .desc {
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
   font-weight: normal;
   margin-top: 1.em;
