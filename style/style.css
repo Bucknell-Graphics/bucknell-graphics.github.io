@@ -12,6 +12,7 @@ html, body, .container {
 /* Define light and dark classes */
 .theme-light {
   --bu-logo-path: ./assets/bulogo_blue.png;
+  --uop-logo-path: ./assets/uop_blue.png;
   --color-bg: #ffffff;
   --color-font: #000000;
   --color-font-hover: #888888;
@@ -24,9 +25,11 @@ html, body, .container {
   --color-table-bg-2: #ffa300;
   --color-table-hl: #ffffe0;
   --color-table-exam: #59cbe8;
+  --select-arrow: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
 }
 .theme-dark {
   --bu-logo-path: ./assets/bulogo_orange.png;
+  --uop-logo-path: ./assets/uop_orange.png;
   --color-bg: #003865;
   --color-font: #ffffff;
   --color-font-hover: #888888;
@@ -39,6 +42,7 @@ html, body, .container {
   --color-table-bg-2: #0082ba;
   --color-table-hl: #ffffe0;
   --color-table-exam: #e87722;
+  --select-arrow: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
 }
 
 /*********************************************
@@ -233,4 +237,35 @@ a:visited {
   text-align: left;
 }
 
+/* Make the dropdown blend perfectly into the header */
+.year-select {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
 
+  /* remove the default outline on focus */
+  outline: none;
+
+  /* fix the arrow position */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* add a custom arrow if desired */
+  background-image: var(--select-arrow);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 18px;
+}
+
+/* The dropdown options themselves */
+.year-select option {
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: var(--color-table-head-bg);  /* dropdown background */
+  color: var(--color-font);                      /* dropdown text color */
+}

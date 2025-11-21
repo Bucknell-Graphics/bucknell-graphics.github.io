@@ -17,8 +17,8 @@
   <body>
     <br/>
 	<header></header>
-  <img id="logo" src="" alt="Bucknell Logo" class="logo">
-  <h1 class="title">CSCI 379 Computer Graphics Wizard Academy Demos</h1>
+  <img height="193" id="logo" src="" alt="Bucknell Logo" class="logo">
+  <h1 id="title" class="title">CSCI 379 Computer Graphics Wizard Academy Demos</h1>
   <content>
     <h3 class="desc">Here are some basic demos for each quest, which are not exclusive, but give you the basic ideas of what I expect from you to complete a quest.</h3>
     <table class="tasks">
@@ -26,74 +26,22 @@
         <tr>
           <th>Quest</th>
           <th>Demo</th>
-          <th>Spring 2025 Student Work and Winner</th>
+          <th>
+          <select id="year-select" class="year-select">
+            <option value="SP25">Spring 2025</option>
+            <option value="SP26" selected>Spring 2026</option>
+          </select>
+          <label for="year-select">Student Work and Winner</label>
+          </th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>01</td>
-          <td><a href="quest1-Demo.html">A 2D Static Scene</a></td>
-          <td><a href="SP25/quest1.html">The Legendary Blockasaurus</a> by Nolan Sauers<br/><a href="SP25/quest1-.html">The Library</a> by Wera Kyaw Kyaw</td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td><a href="quest2-Demo.html">An Animated 2D Scene</a></td>
-          <td><a href="SP25/quest2.html">View Space from Another World!</a> by Kevin Duong<br/><a href="SP25/quest2-.html">Hence The Beetroot</a> by Jesse Tomaskovic<br/><a href="SP25/quest2_.html">The Galaxy</a> by Gordon Rose<br/><a href="SP25/quest2+.html">The Solar System</a> by TJ Freeman</td>
-        </tr>
-        <tr>
-          <td>03</td>
-          <td><a href="quest3-Demo.html">An Interactive 2D Scene</a></td>
-          <td><a href="SP25/quest3.html">Game of Life-ish</a> by Jackson Rubiano<br/><a href="SP25/quest3-.html">Game of Pattens?</a> by TJ Freeman<br/><a href="SP25/quest3_.html">Game of Life?</a> by Berty Levi</td>
-        </tr>
-        <tr>
-          <td>04</td>
-          <td><a href="quest4-Demo.html">A 2D Particle System</a></td>
-          <td><a href="SP25/quest4.html">The World of Particles</a> by Jackson Rubiano<br/><a href="SP25/quest4-.html">The Jellyfish</a> by Nolan Sauers<br/><a href="SP25/quest4_.html">A continuous rising pillar of particles</a> by Jesse Tomaskovic<br/><a href="SP25/quest4+.html">Infinite Waterfall</a> by TJ Freeman<br/><a href="SP25/quest4=.html">Circulating Jellyfish?</a> by TJ Freeman<br/><a href="SP25/quest4--.html">Color Smoke</a> by Gordon Rose</td>
-        </tr>
-        <tr>
-          <td>05</td>
-          <td><a href="quest5-Demo.html">A 2D Collision Detection/Deformation</a></br><a href="quest5-Demo2.html">2D ARAP Deformation</a></td>
-          <td><a href="SP25/quest5.html">Collision Detection</a> by Nolan Sauers<br/><a href="SP25/quest5-.html">Deformation</a> by Titus Weng</td>
-        </tr>
-        <tr>
-          <td>06</td>
-          <td><a href="quest6-Demo.html">A 3D Object Scene</a> (<a href="quest6-Demo2.html">w/o PGA</a>)</td>
-          <td><a href="SP25/quest6.html">3D Camera Control</a> by Jackson Rubiano<br/><a href="SP25/quest6-.html">The Arcane Path of Rays</a> by Ramon Asuncion Batista</td>
-        </tr>
-        <tr>
-          <td>07</td>
-          <td><a href="quest7-Demo.html">A 3D Volume Rendering Scene</a> (<a href="quest7-Demo3.html">w/o PGA</a>)</br><a href="quest7-Demo2.html">Another 3D Volume Rendering Scene</a> (<a href="quest7-Demo4.html">w/o PGA</a>)</td>
-          <td><a href="SP25/quest7.html">3D Rendering - Frog</a> by Aiden Ren<br/><a href="SP25/quest7_.html">Spectral Edge Volume Rendering</a> by Hung Ngo<br/><a href="SP25/quest7-.html">The Arcane Mysteries of Volume Data</a> by Ramon Asuncion Batista<br/><a href="SP25/quest7+.html">Brain Projection</a> by Kevin Duong</td>
-        </tr>
-        <tr>
-          <td>08</td>
-          <td><a href="quest8-Demo.html">A 3D Ray Tracing Scene (Shading)</a> (<a href="quest8-Demo2.html">w/o PGA</a>)</br><a href="quest8-Demo3.html">A 3D Ray Tracing Scene (Texture)</a> (<a href="quest8-Demo4.html">w/o PGA</a>)</td>
-          <td><a href="SP25/quest8.html">Texture Maps & Lightings</a> by Jackson Rubiano<br/><a href="SP25/quest8-.html">Conjure Light!</a> by Kevin Duong<br/><a href="SP25/quest8+.html">Shiny Box</a> by Gordon Rose</td>
-        </tr>
-        <tr>
-          <td>09</td>
-          <td><a href="quest9-Demo.html">A 3D Ray Tracing Scene (Shadows)</a> (<a href="quest9-Demo2.html">w/o PGA</a>)</br><a href="quest9-Demo3.html">A 3D Ray Tracing Scene (Mirror/Transparency)</a> (<a href="quest9-Demo4.html">w/o PGA</a>)</td>
-          <td><a href="SP25/quest9.html">Shadow Attempts</a> by Nolan Sauers</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td><a href="quest10-Demo.html">An 3D Interactive Scene (Keyframe Animation)</a></br><a href="quest10-Demo3.html">An 3D Interactive Scene (Accelated Ray Tracing)</a></td>
-          <td><a href="SP25/quest10.html">The Shape Shifter's Trial</a> by Aiden Ren<br/><a href="SP25/quest10-.html">Shape Interpolation<a/> by Hung Ngo</td>
-        </tr>
-        <tr>
-          <td>Masterpieces</td>
-          <td>-</td>
-          <td><a href="/SP25Projects/thaum.html">'Thaumcraft 4' inspired mini-game!</a> (<a href="https://drive.google.com/file/d/10g3ESYiDc26VuGF2xtcAcMuHS-qel21d/view">Video Demo</a>) by <a href="https://github.com/gar018/thaumcraft-research-minigame/blob/main/README.md">Gordon</a></br>
-          <a href="/SP25Projects/menu.html">Fire & Water — A Two‑Character Co‑op Puzzle‑Platformer</a> (<a href="https://drive.google.com/file/d/170B_NikOJyxN45Wswu5MiYyoN_FI-uO7/view">Video Demo</a>) by <a href="https://github.com/inicucausecrushedbykiriko/FinalProject/blob/main/README.md">Aiden, and Titus</a></br>
-          <a href="/SP25Projects/rendering.html">Photorealistic Volume Rendering with WebGPU</a> (<a href="https://drive.google.com/file/d/1jDGTCrG5dm-X0AAFSIkhgyHopuMhtGTD/view">Video Demo</a>) by <a href="https://github.com/hungngo04/CSCI379_FinalProject_PhotorealisticRenderingWebGPU/blob/main/README.md">Hung</a></br>
-          <a href="/SP25Projects/fluid.html">Fluid Simulation</a> (<a href="https://drive.google.com/file/d/1Pv-Y-i4zmowygo-_XJ2xN_yu3Q_loGYQ/view">Video Demo</a>) by <a href="https://github.com/RamonAsuncion/fluid-simulation/blob/main/README.md">Luke, Ramon, and Nolan</a></br></br>
-          <b>Winner</b>: <a href="/SP25Projects/VRCraft.html">Minecraft-Inspired Ray Tracing in VR</a> (<a href="https://drive.google.com/file/d/1iYQkQ_BcvOtOU2gtr0-g7SUOJnkLDshS/view">Video Demo</a>) by <a href="https://github.com/tj-free/VRCraft.github.io/blob/newMain/README.md">Kevin, TJ, Clea, and Jackson</a></td>
-        </tr>
+      <tbody id="demotable">
+        <!-- Load table here -->
       </tbody>
     </table>
     </content>
     <footer>
-      <p class="copyright">Copyright &copy; 2025 SingChun Lee Bucknell University. All rights reserved.</p>
+      <p id="copyright" class="copyright">Copyright © 2025 Sing Chun Lee @ Bucknell University. All rights reserved.</p>
     </footer>
   </body>
 </html>
